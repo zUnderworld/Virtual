@@ -79,4 +79,14 @@ export const properties =
   skill: true,
   sports: false,
   strategy: true
+}, { // fnaf4
+  action: true,
+  idle: false,
+  multiPlayer: false,
+  popular: false,
+  puzzle: false,
+  shooting: false,
+  skill: true,
+  sports: false,
+  strategy: true
 }];

@@ -55,4 +55,11 @@ export const db =
   color2: 'rgba(255, 255, 255, 0.7)',
   src: '../aGAMES-db/eaglercraft/index.html',
   src2: '/aGAMES-db/eaglercraft/index.html'
+}, {
+  name: 'fnaf4',
+  display: "FIVE NIGHTS AT FREDDY'S 4",
+  color: 'rgb(255, 0, 0)',
+  color2: 'rgba(255, 0, 0, 0.7)',
+  src: '../aGAMES-db/fnaf4/index.html',
+  src2: '/aGAMES-db/fnaf4/index.html'
 }];
