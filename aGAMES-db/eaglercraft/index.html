@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Virtual || Eaglercraft 1.8.8</title>
+	<link rel="icon" href="../../images/main.png"/>
+	<script type="text/javascript" src="./lib/launcher.js"></script>
+	<script type="text/javascript" src="./lib/util.js"></script>
+	<script type="text/javascript" src="./lib/wispcraft.js"></script>
+	<script type="text/javascript" src="./lib/largeEPK.js"></script>
+	<script type="text/javascript" src="./lib/sha256.js"></script>
+	<script type="text/javascript">
+		"use strict";
+		window.addEventListener("load", async () => {
+			if (document.location.href.startsWith("file:")) {
+				alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
+			} else {
+				try {
+					checkServiceWorker()
+					const [js, epk] = ([
+						await loadCachedAssetUI("javascript/meta.json", false, "1.8.8-js"),
+						await loadCachedAssetUI("game-assets/meta.json", true, "1.8.8-js")
+					])
+					const relayId = Math.floor(Math.random() * 4);
+					const params = {
+						demoMode: false,
+						container: "game_frame",
+						assetsURI: epk,
+						localesURI: "lang/",
+						worldsDB: "worlds",
+						...(await (await fetch("list.json")).json())
+					};
+					await new Promise(res => {
+						(async () => {
+							await window.wispcraftServerReady
+							res()
+						})()
+						setTimeout(1500, () => res())
+					})
+					params.relays[Math.round(Math.random() * (params.relays.length - 1))].primary = true;
+					parseParams(params);
+					launch(utf8ToString(js), params)
+				} catch (err) {
+					window.alert("Something went wrong, try clearing your browser cache/data?\n---\n" + err.stack ?? err)
+
+				}
+			}
+		});
+	</script>
+</head>
+<style id="bodyStyle">
+	body {
+		margin: 0;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+	}
+</style>
+<body id="game_frame">
+	<div style="margin:0px;width:100%;height:100%;font-family:sans-serif;display:flex;align-items:center;user-select:none;"
+		id="loading-div">
+		<div style="margin:auto;text-align:center;">
+			<h2 id="action-block">Checking for updates...</h2>
+			<h2 id="context-block">(this may take a while)</h2>
+			<div style="border:2px solid black;width:100%;height:15px;padding:1px;margin-bottom:20vh;font-family: Arial, sans-serif;font-weight: bold;"
+				hidden="" id="progress-bar-container">
+				<div id="progress-bar" style="background-color:#ff4545;width:0%;height:100%;top:0;"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

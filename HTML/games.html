@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Virtual || Games</title>
+  <link rel="icon" href="../images/main.png">
+  <link rel="stylesheet" href="../CSS/games.css">
+  <style class="color"></style>
+  <style class="text"></style>
+  <style class="coins"></style>
+  <script>
+    let inIframe = false;
+    try {inIframe = window.self !== window.top} catch {inIframe = true}
+    if (inIframe) {alert("Looks like you're accessing Virtual using a third party software. This means features like hide don't work for security reasons & user protection.")}
+  </script>
+</head>
+<body style="background-color: black">
+  <div class="topbar">
+    <img src="../images/topbar.png" class="topbar-bg">
+    <img src="../images/virtual.png" class="virtual">
+    <a onclick="if (!inIframe) {window.open('home.html', '_blank')} else {window.parent.postMessage('/HTML/home.html', '*')}">Home</a>
+    <a onclick="if (!inIframe) {window.open('games.html', '_blank')} else {window.parent.postMessage('/HTML/games.html', '*')}">Games</a>
+    <a onclick="if (!inIframe) {window.open('hide.html', '_blank')} else {window.parent.postMessage('/HTML/hide.html', '*')}">Hide</a>
+    <a onclick="if (!inIframe) {window.open('sitelist.html', '_blank')} else {window.parent.postMessage('/HTML/sitelist.html', '*')}">Site List</a>
+    <a onclick="if (!inIframe) {window.open('vunblocker.html', '_blank')} else {window.parent.postMessage('/HTML/vunblocker.html', '*')}">V-Unblocker</a>
+    <a onclick="if (!inIframe) {window.open('vconnect.html', '_blank')} else {window.parent.postMessage('/HTML/vconnect.html', '*')}">V-Connect</a>
+    <a onclick="if (!inIframe) {window.open('about.html', '_blank')} else {window.parent.postMessage('/HTML/about.html', '*')}">About</a>
+  </div>
+  <div class="separator"></div>
+  <div class="house">
+    <div class="action"><p class="p">Action Games</p></div>
+    <div class="idle"><p class="p">Idle Games</p></div>
+    <div class="multiPlayer"><p class="p">Multi-Player Games</p></div>
+    <div class="popular"><p class="p">Popular Games</p></div>
+    <div class="puzzle"><p class="p">Puzzle Games</p></div>
+    <div class="shooting"><p class="p">Shooting Games</p></div>
+    <div class="skill"><p class="p">Skill Games</p></div>
+    <div class="sports"><p class="p">Sports Games</p></div>
+    <div class="strategy"><p class="p">Strategy Games</p></div>
+    <div class="all"><p class="p">All Games</p></div>
+  </div>
+  <script src="../JS/games.js" type="module"></script>
+</body>
+</html>
+
+<!--all FNaF games, Basket Bros, Big Shot Boxing, Boxing Random, Temple of Boom, Doge Miner, all Duck Life games, all Vex games, Crossy Road, Bitcoin Clicker, Backrooms, Climb Over It, Core Ball, Cluster Rush, Drift Boss, Drive Mad, Geometry Dash, Slope, Slope 2, Retro Bowl College, Stick Merge, World's Hardest Game, Eaglercraft-->

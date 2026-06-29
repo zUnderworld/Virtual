@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Virtual</title>
+  <link rel="icon" href="images/main.png">
+  <script>
+    let inIframe = false;
+    try {inIframe = window.self !== window.top} catch {inIframe = true}
+  </script>
+</head>
+<body style="background-color: black;">
+  <a onclick="if (!inIframe) {window.open('HTML/home.html', '_blank')} else {window.parent.postMessage('/HTML/home.html', '*')}" style="font-size: 240px; color: white; cursor: pointer">Click Me</a>
+</body>
+</html>

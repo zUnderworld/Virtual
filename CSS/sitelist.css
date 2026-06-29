@@ -1,0 +1,60 @@
+a {
+  all: unset;
+  color: white;
+  display: inline-block;
+  font-family: verdana;
+  font-size: 20px;
+  margin-top: 58px;
+  margin-right: 29px;
+  cursor: pointer;
+  transition: color 1s ease-in-out 0.5s;
+}
+
+.topbar {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  text-align: right;
+  height: 130px;
+}
+
+.virtual {
+  height: 130px;
+  width: 130px;
+  float: left;
+}
+
+.topbar-bg {
+  z-index: -1;
+  height: 130px;
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+.separator {
+  position: fixed;
+  top: 130px;
+  left: 0px;
+  height: 1px;
+  width: 100vw;
+  background-color: white;
+}
+
+.sites {
+  margin-top: 130px;
+}
+
+.site {
+  color: red;
+  display: block;
+  font-family: arial;
+  margin-top: 2px;
+  text-decoration: underline;
+  opacity: 0;
+  transition: opacity 3s ease;
+}

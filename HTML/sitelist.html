@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Virtual || Site List</title>
+  <link rel="icon" href="../images/main.png">
+  <link rel="stylesheet" href="../CSS/sitelist.css">
+  <style class="color"></style>
+  <style class="a"></style>
+  <script>
+    let inIframe = false;
+    try {inIframe = window.self !== window.top} catch {inIframe = true}
+    if (inIframe) {alert("Looks like you're accessing Virtual using a third party software. This means features like hide don't work for security reasons & user protection.")}
+  </script>
+</head>
+<body style="background-color: black">
+  <div class="topbar">
+    <img src="../images/topbar.png" class="topbar-bg">
+    <img src="../images/virtual.png" class="virtual">
+    <a onclick="if (!inIframe) {window.open('home.html', '_blank')} else {window.parent.postMessage('/HTML/home.html', '*')}">Home</a>
+    <a onclick="if (!inIframe) {window.open('games.html', '_blank')} else {window.parent.postMessage('/HTML/games.html', '*')}">Games</a>
+    <a onclick="if (!inIframe) {window.open('hide.html', '_blank')} else {window.parent.postMessage('/HTML/hide.html', '*')}">Hide</a>
+    <a onclick="if (!inIframe) {window.open('sitelist.html', '_blank')} else {window.parent.postMessage('/HTML/sitelist.html', '*')}">Site List</a>
+    <a onclick="if (!inIframe) {window.open('vunblocker.html', '_blank')} else {window.parent.postMessage('/HTML/vunblocker.html', '*')}">V-Unblocker</a>
+    <a onclick="if (!inIframe) {window.open('vconnect.html', '_blank')} else {window.parent.postMessage('/HTML/vconnect.html', '*')}">V-Connect</a>
+    <a onclick="if (!inIframe) {window.open('about.html', '_blank')} else {window.parent.postMessage('/HTML/about.html', '*')}">About</a>
+  </div>
+  <div class="separator"></div>
+  <div class="sites" style="margin-left: 24px;">
+    <a class="site" style="margin-top: 154px;">No sites yet</a>
+  </div>
+  <script src="../JS/sitelist.js"></script>
+</body>
+</html>

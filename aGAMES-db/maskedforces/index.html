@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Virtual || Masked Forces (Unlimited)</title>
+    <link rel="icon" href="../../images/main.png">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+    <script>var gameInstance = UnityLoader.instantiate("gameContainer", "Build/masked-forces-unlimited.json", {onProgress: UnityProgress});</script>
+    <script>
+      let inIframe = false;
+      try {inIframe = window.self !== window.top} catch {inIframe = true}
+      if (inIframe) {alert("Looks like you're accessing Virtual using a third party software. This means features like hide don't work for security reasons & user protection.")}
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 800px; height: 464px"></div>
+      <div class="footer">
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Masked Forces Unlimited</div>
+      </div>
+    </div>
+
+    <script>
+      if (!window.opener && !inIframe) {window.open('../../index.html', '_self')}
+      if (!inIframe) {
+        const windowOpenerSavestate = window.opener;
+        window.opener.close();
+      }
+      let hideKey = localStorage.getItem('hideKey') || '';
+      let values = JSON.parse(localStorage.getItem('values')) || [false, false, true, 'https://', 'Google Classroom'];
+
+      document.addEventListener('keydown', (event) => {if (event.key === hideKey) {hide();}});
+
+      function hide() {
+        if (!inIframe) {
+          if (values[2]) {document.body.innerHTML = `<img src="../images/${values[4]}.png" style="height: 100%; width: 100%; z-index: 1;">`} else {
+            if (values[1]) {window.open(values[3], '_blank');}
+            window.opener = windowOpenerSavestate;
+            if (values[0]) {window.close();}
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

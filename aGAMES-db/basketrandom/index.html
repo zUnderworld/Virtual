@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta name="generator" content="Construct 3" />
+    <title>Virtual || Basket Random</title>
+    <link rel="icon" href="../../images/main.png"/>
+    <span id="macvgmacvg" name="game294"></span>
+
+    <link rel="manifest" href="appmanifest.json" />
+    <link rel="stylesheet" href="style.css"/>
+    <script src="./scripts/main.js"></script>
+    <script>
+      window.addEventListener(
+        "keydown",
+        function (e) {
+          if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+            e.preventDefault();
+          }
+        },
+        false
+      );
+    </script>
+    <script>
+      let inIframe = false;
+      try {inIframe = window.self !== window.top} catch {inIframe = true}
+      if (inIframe) {alert("Looks like you're accessing Virtual using a third party software. This means features like hide don't work for security reasons & user protection.")}
+    </script>
+  </head>
+  <body>
+    <script src="box2d.wasm.js"></script>
+    <noscript>
+      <div id="notSupportedWrap">
+        <h2 id="notSupportedTitle">This content requires JavaScript</h2>
+        <p class="notSupportedMessage">
+          JavaScript appears to be disabled. Please enable it to view this
+          content.
+        </p>
+        <p class="notSupportedMessage">
+          This content was made with Construct 3 - a
+          <a href="https://www.construct.net/en">free game maker</a>.
+        </p>
+      </div>
+    </noscript>
+    <script src="scripts/supportcheck.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+      if (!window.opener && !inIframe) {window.open('../../index.html', '_self')}
+      if (!inIframe) {
+        const windowOpenerSavestate = window.opener;
+        window.opener.close();
+      }
+      let hideKey = localStorage.getItem('hideKey') || '';
+      let values = JSON.parse(localStorage.getItem('values')) || [false, false, true, 'https://', 'Google Classroom'];
+
+      document.addEventListener('keydown', (event) => {if (event.key === hideKey) {hide();}});
+
+      function hide() {
+        if (!inIframe) {
+          if (values[2]) {document.body.innerHTML = `<img src="../images/${values[4]}.png" style="height: 100%; width: 100%; z-index: 1;">`} else {
+            if (values[1]) {window.open(values[3], '_blank');}
+            window.opener = windowOpenerSavestate;
+            if (values[0]) {window.close();}
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

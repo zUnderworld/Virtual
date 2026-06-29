@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Virtual || Home</title>
+  <link rel="icon" href="../images/main.png">
+  <link rel="stylesheet" href="../CSS/home.css">
+  <style class="suggestion"></style>
+  <style class="color"></style>
+  <script>
+    let inIframe = false;
+    try {inIframe = window.self !== window.top} catch {inIframe = true}
+    if (inIframe) {alert("Looks like you're accessing Virtual using a third party software. This means features like hide don't work for security reasons & user protection.")}
+  </script>
+</head>
+<body style="background-color: black">
+  <div class="topbar">
+    <img src="../images/topbar.png" class="topbar-bg">
+    <img src="../images/virtual.png" class="virtual">
+    <a onclick="if (!inIframe) {window.open('home.html', '_blank')} else {window.parent.postMessage('/HTML/home.html', '*')}">Home</a>
+    <a onclick="if (!inIframe) {window.open('games.html', '_blank')} else {window.parent.postMessage('/HTML/games.html', '*')}">Games</a>
+    <a onclick="if (!inIframe) {window.open('hide.html', '_blank')} else {window.parent.postMessage('/HTML/hide.html', '*')}">Hide</a>
+    <a onclick="if (!inIframe) {window.open('sitelist.html', '_blank')} else {window.parent.postMessage('/HTML/sitelist.html', '*')}">Site List</a>
+    <a onclick="if (!inIframe) {window.open('vunblocker.html', '_blank')} else {window.parent.postMessage('/HTML/vunblocker.html', '*')}">V-Unblocker</a>
+    <a onclick="if (!inIframe) {window.open('vconnect.html', '_blank')} else {window.parent.postMessage('/HTML/vconnect.html', '*')}">V-Connect</a>
+    <a onclick="if (!inIframe) {window.open('about.html', '_blank')} else {window.parent.postMessage('/HTML/about.html', '*')}">About</a>
+  </div>
+  <div class="separator"></div>
+  <div class="page-contents">
+    <div class="page-text" style="flex: 1;">
+      <p class="title">Virtual. Your Unblocked Haven.</p>
+      <p class="subtitle">Virtual is an unblocked site featuring games, site lists, an unblocker, & more.</p>
+      <p class="main-text">Whether you want to browse freely, see sites updated weekly, or simply play games, Virtual has got it! Want to see all the most popular games & play them? Virtual sorts the games. Want to quickly hide the website with the press of a button? Virtual has the hide feature. Want to connect with your friend & play with them even if you're in separate classrooms? Virtual even has that!</p>
+      <p class="main-text">Virtual doesn't have it all (yet). If you have any features you would like added, please contact Virtual privately. For more about our systems, what exactly you bought, & any other inquiries about Virtual, please see the <a onclick="window.open('about.html')" style="all: unset; color: blue; text-decoration: underline; cursor: pointer;">About</a> page. All information is here.</p>
+      <p class="main-text">Please use common sense, for your own sake. Finish your assignments, use Virtual in secret, & make it a way to solve the fact that you're doing nothing rather than a way to bypass education.</p>
+      <p class="main-text" style="padding-bottom: 8px;">Anyways, what are you waiting for? You have a website where anything you request is added, any game you want to play is there. Go explore!</p>
+    </div>
+    <div class="midline"></div>
+    <div class="page-suggestion">
+      <p class="suggestion-text"></p>
+      <button class="suggestion-button"></button>
+    </div>
+  </div>
+  <script src="../JS/home.js"></script>
+</body>
+</html>

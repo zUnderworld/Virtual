@@ -1,0 +1,1 @@
+Game.tooltip.shouldHide=1;

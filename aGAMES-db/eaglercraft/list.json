@@ -1,0 +1,12 @@
+{
+  "servers": [
+    { "addr": "wss://reading-gs.q13x.com", "name": "q13x's Anarchy Server" },
+    { "addr": "wss://mc.arch.lol", "name": "ArchMC" },
+    { "addr": "java://mc.hypixel.net/?require_online=1", "name": "Hypixel (Proxied)" },
+    { "addr": "settings://", "name": "Wispcraft Settings" }
+  ],
+  "relays": [
+    { "addr": "wss://relay.lax1dude.net/", "comment": "lax1dude relay" },
+    { "addr": "wss://relay.shhnowisnottheti.me/", "comment": "ayunami relay #1" }
+  ]
+}

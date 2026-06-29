@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Virtual || Hide</title>
+  <link rel="stylesheet" href="../CSS/hide.css">
+  <link rel="icon" href="../images/main.png">
+  <style class="color"></style>
+  <style class="text"></style>
+  <script>
+    let inIframe = false;
+    try {inIframe = window.self !== window.top} catch {inIframe = true}
+    if (inIframe) {alert("Looks like you're accessing Virtual using a third party software. This means features like hide don't work for security reasons & user protection.")}
+  </script>
+</head>
+<body style="background-color: black">
+  <div class="topbar">
+    <img src="../images/topbar.png" class="topbar-bg">
+    <img src="../images/virtual.png" class="virtual">
+    <a onclick="if (!inIframe) {window.open('home.html', '_blank')} else {window.parent.postMessage('/HTML/home.html', '*')}">Home</a>
+    <a onclick="if (!inIframe) {window.open('games.html', '_blank')} else {window.parent.postMessage('/HTML/games.html', '*')}">Games</a>
+    <a onclick="if (!inIframe) {window.open('hide.html', '_blank')} else {window.parent.postMessage('/HTML/hide.html', '*')}">Hide</a>
+    <a onclick="if (!inIframe) {window.open('sitelist.html', '_blank')} else {window.parent.postMessage('/HTML/sitelist.html', '*')}">Site List</a>
+    <a onclick="if (!inIframe) {window.open('vunblocker.html', '_blank')} else {window.parent.postMessage('/HTML/vunblocker.html', '*')}">V-Unblocker</a>
+    <a onclick="if (!inIframe) {window.open('vconnect.html', '_blank')} else {window.parent.postMessage('/HTML/vconnect.html', '*')}">V-Connect</a>
+    <a onclick="if (!inIframe) {window.open('about.html', '_blank')} else {window.parent.postMessage('/HTML/about.html', '*')}">About</a>
+  </div>
+  <div class="separator"></div>
+  <div class="page-contents">
+    <div class="page-text" style="flex: 1;">
+      <p class="title">Hide (documentation)</p>
+      <p class="subtitle">Hide is a feature built in to Virtual to quickly toggle from games to school work.</p>
+      <p class="main-text">The main purpose of hide is to avoid being caught on Virtual. On the right, there are a few buttons. First, we have the HIDE button. This button immediately hides your screen using the settings you have underneath. Then, we have the toggle hide key. This allows you to pick any key on your keyboard so that when it is pressed, the hide function executes automatically. Finally, there are the different hide modes. You can choose between immediately closing the page, opening a new one, both, or an image overlay.</p>
+      <p class="main-text">Once you set a hide key, it becomes effective immediately. If that key is pressed again without any new modifications, it will hide. Virtual recommends you choose the close page option for hiding as it is the most effective & doesn't require time to load any additional new pages. Lastly, the HIDE button in the hide page is only meant for testing purposes. Virtual recommends you set a toggle hide key for the most effectiveness.</p>
+      <p class="main-text">Never be too safe with the hide feature. Anyone - teachers, classmates, & even your own friends can be what gets you sold out. Use the hide feature wisely & as recommended for most effectiveness. Note that the open new tab feature will not work unless you paste in a full, real URL. We ask you to paste the URL in (by right clicking & selecting paste) so you don't accidentally activate the hide feature while typing in the URL.</p>
+    </div>
+    <div class="midline"></div>
+    <div class="buttons-house">
+      <button class="hide">HIDE</button>
+      <input placeholder="Toggle Hide Key" class="toggle">
+      <div class="inputs">
+        <div><input type="checkbox" class="close"><p style="color: red; display: inline-block; margin-left: 4px; text-decoration: underline; font-size: 20px;">Close Page</p></div>
+        <div><input type="checkbox" class="tab"><p style="color: red; display: inline-block; margin-left: 4px; text-decoration: underline; font-size: 20px;">Open New Tab</p></div>
+        <div><input type="checkbox" class="image"><p style="color: red; display: inline-block; margin-left: 4px; text-decoration: underline; font-size: 20px;">Image Overlay</p></div>
+      </div>
+    </div>
+  </div>
+  <script src="../JS/hide.js"></script>
+</body>
+</html>

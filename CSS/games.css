@@ -1,0 +1,91 @@
+a {
+  all: unset;
+  color: white;
+  display: inline-block;
+  font-family: verdana;
+  font-size: 20px;
+  margin-top: 58px;
+  margin-right: 29px;
+  cursor: pointer;
+  transition: color 1s ease-in-out 0.5s;
+  z-index: 999;
+}
+
+.topbar {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  text-align: right;
+  height: 130px;
+  margin-bottom: 130px;
+  z-index: 999;
+}
+
+.virtual {
+  height: 130px;
+  width: 130px;
+  float: left;
+  z-index: 999;
+}
+
+.topbar-bg {
+  z-index: -1;
+  height: 130px;
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+.separator {
+  position: fixed;
+  top: 130px;
+  left: 0px;
+  height: 1px;
+  width: 100vw;
+  background-color: white;
+  z-index: 999;
+}
+
+.house {margin: 150px 0px 0px 12px}
+
+.igcoin {
+  height: 142px;
+  width: 142px;
+  border-radius: 12px;
+  opacity: 0.7;
+  z-index: -2;
+}
+
+.gcoin {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  width: 142px;
+  height: 142px;
+  transition: box-shadow ease-out 1s, border-color ease-out 1s;
+}
+
+.pgcoin {
+  font-family: verdana;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  position: absolute; 
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.p {
+  color: white;
+  font-size: 40px;
+  font-family: arial;
+  font-weight: 700;
+  margin: 48px 0px 8px 0px;
+}

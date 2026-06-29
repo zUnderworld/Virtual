@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <iframe src="index.html"></iframe>
+  <script>window.addEventListener('message', (e) => {document.querySelector('iframe').src = 'https://zunderworld.github.io/Virtual' + e.data})</script>
+</body>
+</html>
