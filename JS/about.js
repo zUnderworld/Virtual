@@ -1,7 +1,8 @@
 const randomColors = ['red', 'orange', 'yellow', 'lime', 'green', 'aqua', 'darkcyan', 'blue', 'darkblue', 'blueviolet'];
 if (!window.opener && !inIframe) {window.open('../index.html', '_self')}
+let windowOpenerSavestate;
 if (!inIframe) {
-  const windowOpenerSavestate = window.opener;
+  windowOpenerSavestate = window.opener;
   window.opener.close();
 }
 setInterval(() => {

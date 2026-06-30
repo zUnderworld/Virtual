@@ -4,10 +4,10 @@ setInterval(() => {
   document.querySelector('.color').innerHTML = `.topbara:hover {color: ${randomColors[String(randomColor)[3]]}}`;
 }, 1100);
 window.addEventListener('DOMContentLoaded', () => {document.querySelector('.a').innerHTML = `.site {opacity: 1;}`});
-
+let windowOpenerSavestate;
 if (!window.opener && !inIframe) {window.open('../index.html', '_self')}
 if (!inIframe) {
-  const windowOpenerSavestate = window.opener;
+  windowOpenerSavestate = window.opener;
   window.opener.close();
 }
 let hideKey = localStorage.getItem('hideKey') || '';

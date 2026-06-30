@@ -62,4 +62,11 @@ export const db =
   color2: 'rgba(255, 0, 0, 0.7)',
   src: '../aGAMES-db/fnaf4/index.html',
   src2: '/aGAMES-db/fnaf4/index.html'
+}, {
+  name: 'fnaf3',
+  display: "FIVE NIGHTS AT FREDDY'S 3",
+  color: 'rgb(0, 255, 0)',
+  color2: 'rgba(0, 255, 0, 0.7)',
+  src: '../aGAMES-db/fnaf3/index.html',
+  src2: '/aGAMES-db/fnaf3/index.html'
 }];

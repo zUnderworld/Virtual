@@ -3,9 +3,10 @@ const hideColors = ['rgb(255, 75, 75)', 'rgb(180, 0, 0)'];
 let hideKey = localStorage.getItem('hideKey') || '';
 let values = JSON.parse(localStorage.getItem('values')) || [false, false, true, 'https://', 'Google Classroom'];
 let i = 0;
+let windowOpenerSavestate;
 if (!window.opener && !inIframe) {window.open('../index.html', '_self')}
 if (!inIframe) {
-  const windowOpenerSavestate = window.opener;
+  windowOpenerSavestate = window.opener;
   window.opener.close();
 }
 setInterval(() => {

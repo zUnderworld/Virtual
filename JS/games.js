@@ -1,7 +1,8 @@
 const randomColors = ['red', 'orange', 'yellow', 'lime', 'green', 'aqua', 'darkcyan', 'blue', 'darkblue', 'blueviolet'];
 if (!window.opener && !inIframe) {window.open('../index.html', '_self')}
+let windowOpenerSavestate;
 if (!inIframe) {
-  const windowOpenerSavestate = window.opener;
+  windowOpenerSavestate = window.opener;
   window.opener.close();
 }
 setInterval(() => {
@@ -53,7 +54,6 @@ db.forEach((game) => {
   
   
   if (properties[i-1].action) {document.querySelector('.action').innerHTML+=gcoin}
-  if (properties[i-1].idle) {document.querySelector('.idle').innerHTML += gcoin}
   if (properties[i-1].multiPlayer) {document.querySelector('.multiPlayer').innerHTML += gcoin}
   if (properties[i-1].popular) {document.querySelector('.popular').innerHTML += gcoin}
   if (properties[i-1].puzzle) {document.querySelector('.puzzle').innerHTML += gcoin}

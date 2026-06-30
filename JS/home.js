@@ -5,11 +5,11 @@ window.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {suggestion.innerHTML += `.subtitle {opacity: 1;}`;}, 600);
   setTimeout(() => {suggestion.innerHTML += `.main-text, .suggestion-button {opacity: 1;}`;}, 2100);
 });
-
+let windowOpenerSavestate;
 let hideKey = localStorage.getItem('hideKey') || '';
 if (!window.opener && !inIframe) {window.open('../index.html', '_self')}
 if (!inIframe) {
-  const windowOpenerSavestate = window.opener;
+  windowOpenerSavestate = window.opener;
   window.opener.close();
 }
 let values = JSON.parse(localStorage.getItem('values')) || [false, false, true, 'https://', 'Google Classroom'];

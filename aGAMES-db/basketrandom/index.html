@@ -8,7 +8,7 @@
     />
     <meta name="generator" content="Construct 3" />
     <title>Virtual || Basket Random</title>
-    <link rel="icon" href="../../images/main.png"/>
+    <link rel="icon" href="../../images/main.png">
     <span id="macvgmacvg" name="game294"></span>
 
     <link rel="manifest" href="appmanifest.json" />
@@ -49,9 +49,10 @@
     <script src="scripts/supportcheck.js"></script>
     <script src="scripts/main.js"></script>
     <script>
+      let windowOpenerSavestate;
       if (!window.opener && !inIframe) {window.open('../../index.html', '_self')}
       if (!inIframe) {
-        const windowOpenerSavestate = window.opener;
+        windowOpenerSavestate = window.opener;
         window.opener.close();
       }
       let hideKey = localStorage.getItem('hideKey') || '';

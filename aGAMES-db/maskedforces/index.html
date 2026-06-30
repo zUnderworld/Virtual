@@ -26,8 +26,9 @@
 
     <script>
       if (!window.opener && !inIframe) {window.open('../../index.html', '_self')}
+      let windowOpenerSavestate;
       if (!inIframe) {
-        const windowOpenerSavestate = window.opener;
+        windowOpenerSavestate = window.opener;
         window.opener.close();
       }
       let hideKey = localStorage.getItem('hideKey') || '';
