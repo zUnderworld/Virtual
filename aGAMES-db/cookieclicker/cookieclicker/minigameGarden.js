@@ -1436,7 +1436,6 @@ M.launch=function()
 					else {l('gardenSeed-'+it.id).classList.remove('on');}
 				}
 			}
-			//PlaySound('snd/tick.mp3');
 		}
 		
 		M.useTool=function(what,x,y)
