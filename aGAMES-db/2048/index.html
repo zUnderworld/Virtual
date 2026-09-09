@@ -75,7 +75,7 @@
   <script>window.requestAnimationFrame(function () {new GameManager(4, KeyboardInputManager, HTMLActuator, LocalStorageManager);});</script>
   <script>
     let windowOpenerSavestate;
-    if (!window.opener && !inIframe) {window.open('../../index.html', '_self')}
+    if (!window.opener && !inIframe) {window.open('../../../index.html', '_self')}
     if (!inIframe) {
       windowOpenerSavestate = window.opener;
       window.opener.close();

@@ -1,23 +1,3 @@
-if (!window.opener && !inIframe) {window.open('../../../index.html', '_self')}
-if (!inIframe) {
-  const windowOpenerSavestate = window.opener;
-  window.opener.close();
-}
-let hideKey = localStorage.getItem('hideKey') || '';
-let values = JSON.parse(localStorage.getItem('values')) || [false, false, true, 'https://', 'Google Classroom'];
-
-document.addEventListener('keydown', (event) => {if (event.key === hideKey) {hide();}});
-
-function hide() {
-  if (!inIframe) {
-    if (values[2]) {document.body.innerHTML = `<img src="../images/${values[4]}.png" style="height: 100%; width: 100%; z-index: 1;">`} else {
-      if (values[1]) {window.open(values[3], '_blank');}
-      window.opener = windowOpenerSavestate;
-      if (values[0]) {window.close();}
-    }
-  }
-}
-
 function l(what) {return document.getElementById(what);}
 function choose(arr) {return arr[Math.floor(Math.random()*arr.length)];}
 
@@ -7587,8 +7567,6 @@ Game.Launch=function()
 						'News : obesity epidemic strikes nation; experts blame '+choose(['twerking','that darn rap music','video-games','lack of cookies','mysterious ghostly entities','aliens','parents','schools','comic-books','cookie-snorting fad'])+'.',
 						'News : cookie shortage strikes town, people forced to eat cupcakes; "just not the same", concedes mayor.',
 						'News : "you gotta admit, all this cookie stuff is a bit ominous", says confused idiot.',
-						//'News : scientists advise getting used to cookies suffusing every aspect of life; "this is the new normal", expert says.',
-						//'News : doctors advise against wearing face masks when going outside. "You never know when you might need a cookie... a mask would just get in the way."',//these were written back when covid hadn't really done much damage yet but they just feel in poor taste now
 						'News : is there life on Mars? Various chocolate bar manufacturers currently under investigation for bacterial contaminants.',
 						'News : "so I guess that\'s a thing now", scientist comments on cookie particles now present in virtually all steel manufactured since cookie production ramped up worldwide.',
 						'News : trace amounts of cookie particles detected in most living creatures, some of which adapting them as part of new and exotic metabolic processes.',
