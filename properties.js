@@ -62,7 +62,7 @@ export const properties =
   skill: true,
   sports: false,
   strategy: true
-}, { // eaglercraft
+}, { // eaglercraft 1.8.8
   action: true,
   multiPlayer: true,
   popular: true,
@@ -84,6 +84,15 @@ export const properties =
   action: true,
   multiPlayer: false,
   popular: false,
+  puzzle: false,
+  shooting: false,
+  skill: true,
+  sports: false,
+  strategy: true
+}, { // eaglercraft 26.2
+  action: true,
+  multiPlayer: true,
+  popular: true,
   puzzle: false,
   shooting: false,
   skill: true,
