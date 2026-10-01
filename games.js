@@ -4,7 +4,7 @@ import {properties} from './properties.js';
 let i = 1;
 db.forEach((game) => {
   const gcoin = `
-    <div class="gcoin g-${i}" onclick="window.open('${game.src}', 'self')">
+    <div class="gcoin g-${i}" onclick="window.open('${game.src}', '_self')">
       <img src="images/${game.name}.png" class="igcoin">
       <p class="pgcoin">${game.display}</p>
     </div>
