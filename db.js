@@ -42,11 +42,11 @@ export const db =
   color2: 'rgba(255, 0, 0, 0.7)',
   src: '../Virtual/aGAMES-db/fnaf2/index.html'
 }, {
-  name: 'eaglercraft',
-  display: 'EAGLERCRAFT',
+  name: 'eaglercraft-1-8-8',
+  display: 'EAGLERCRAFT 1.8.8',
   color: 'rgb(255, 255, 255)',
   color2: 'rgba(255, 255, 255, 0.7)',
-  src: '../Virtual/aGAMES-db/eaglercraft/index.html'
+  src: '../Virtual/aGAMES-db/eaglercraft-1-8-8/index.html'
 }, {
   name: 'fnaf4',
   display: "FIVE NIGHTS AT FREDDY'S 4",
@@ -59,4 +59,10 @@ export const db =
   color: 'rgb(0, 255, 0)',
   color2: 'rgba(0, 255, 0, 0.7)',
   src: '../Virtual/aGAMES-db/fnaf3/index.html'
+}, {
+  name: 'eaglercraft-26-2',
+  display: 'EAGLERCRAFT 26.2',
+  color: 'rgb(255, 255, 255)',
+  color2: 'rgba(255, 255, 255, 0.7)',
+  src: '../Virtual/aGAMES-db/eaglercraft-26-2/index.html'
 }];
