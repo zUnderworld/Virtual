@@ -9,11 +9,6 @@
 	var PRESETMODS=[];
 	var LOCAL=(App || !window.location.hostname || window.location.hostname==='localhost' || window.location.hostname==='127.0.0.1');
 </script>
-<script>
-	let inIframe = false;
-	try {inIframe = window.self !== window.top} catch {inIframe = true}
-	if (inIframe) {alert("Looks like you're accessing Virtual using a third party software. This means features like hide don't work for security reasons & user protection.")}
-</script>
 <script type="text/javascript">
 	if (!LOCAL)
 	{
@@ -38,7 +33,7 @@
 	}
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=357399801355203&ev=PageView&noscript=1"></noscript>
-<title>Virtual || Cookie Clicker</title>
+<title>Virtual</title>
 <meta name="viewport" content="width=900, initial-scale=1">
 <link rel="icon" href="../../../images/main.png">
 <script src="base64.js"></script>
@@ -258,28 +253,6 @@
 		<div id="preloadImages" style="display:none;"></div>
 
 	</div>
-	<script>
-    let windowOpenerSavestate;
-    if (!window.opener && !inIframe) {window.open('../../../index.html', '_self')}
-    if (!inIframe) {
-      windowOpenerSavestate = window.opener;
-      window.opener.close();
-    }
-    let hideKey = localStorage.getItem('hideKey') || '';
-    let values = JSON.parse(localStorage.getItem('values')) || [false, false, true, 'https://', 'Google Classroom'];
-
-    document.addEventListener('keydown', (event) => {if (event.key === hideKey) {hide();}});
-
-    function hide() {
-      if (!inIframe) {
-        if (values[2]) {document.body.innerHTML = `<img src="../images/${values[4]}.png" style="height: 100%; width: 100%; z-index: 1;">`} else {
-          if (values[1]) {window.open(values[3], '_blank');}
-          window.opener = windowOpenerSavestate;
-          if (values[0]) {window.close();}
-        }
-      }
-    }
-  </script>
 </div>
 </body>
 </html>

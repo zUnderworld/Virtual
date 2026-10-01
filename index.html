@@ -3,13 +3,21 @@
 <head>
   <title>Virtual</title>
   <link rel="icon" href="images/main.png">
-  <script>
-    let inIframe = false;
-    try {inIframe = window.self !== window.top} catch {inIframe = true}
-  </script>
+  <link rel="stylesheet" href="games.css">
+  <style class="coins"></style>
 </head>
-<body style="background-color: black;">
-  <a onclick="if (!inIframe) {window.open('HTML/home.html', '_blank')} else {window.parent.postMessage('/HTML/home.html', '*')}" style="font-size: 240px; color: white; cursor: pointer">Click Me</a>
-  <script>localStorage.setItem("CookieClickerLang", "EN");</script>
+<body style="background-color: black">
+  <div class="action"><p class="p">Action Games</p></div>
+  <div class="multiPlayer"><p class="p">Multi-Player Games</p></div>
+  <div class="popular"><p class="p">Popular Games</p></div>
+  <div class="puzzle"><p class="p">Puzzle Games</p></div>
+  <div class="shooting"><p class="p">Shooting Games</p></div>
+  <div class="skill"><p class="p">Skill Games</p></div>
+  <div class="sports"><p class="p">Sports Games</p></div>
+  <div class="strategy"><p class="p">Strategy Games</p></div>
+  <div class="all" style="margin-bottom: 12px;"><p class="p">All Games</p></div>
+  <script src="games.js" type="module"></script>
 </body>
 </html>
+
+<!--To-do: Fix eaglercraft online play for 1.8.8 & maybe stuff not saving, add eaglercraft 1.12.2, add retro bowl-->

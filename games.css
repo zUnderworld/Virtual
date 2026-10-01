@@ -1,0 +1,37 @@
+.igcoin {
+  height: 142px;
+  width: 142px;
+  border-radius: 12px;
+  opacity: 0.7;
+  z-index: -2;
+}
+
+.gcoin {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  width: 142px;
+  height: 142px;
+  transition: box-shadow ease-out 1s, border-color ease-out 1s;
+}
+
+.pgcoin {
+  font-family: verdana;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  position: absolute; 
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.p {
+  color: white;
+  font-size: 40px;
+  font-family: arial;
+  font-weight: 700;
+  margin: 48px 0px 8px 0px;
+}
