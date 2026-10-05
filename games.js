@@ -37,3 +37,5 @@ db.forEach((game) => {
   document.querySelector('.all').innerHTML += gcoin;
   i++;
 });
+
+localStorage.setItem('CookieClickerLang', 'EN')
