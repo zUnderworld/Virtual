@@ -4,7 +4,7 @@ export const db =
   display: 'RETRO BOWL',
   color: 'rgb(0, 128, 0)',
   color2: 'rgba(0, 128, 0, 0.7)',
-  src: '../Virtual/aGAMES-db/19etrobowl/index.html'
+  src: '../Virtual/aGAMES-db/18etrobowl/index.html'
 }, {
   name: 'cookieclicker',
   display: 'COOKIE CLICKER',
