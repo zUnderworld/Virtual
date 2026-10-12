@@ -154,9 +154,6 @@ var ajax=function(url,callback)
 	return true;
 }
 
-var DataDir='';//'//orteil.dashnet.org/data/';
-DataDir=window.location.origin+'/data/';
-
 var getJson=function(url,callback,error)
 {
 	if (Game.local) return false;
@@ -2561,7 +2558,7 @@ Game.Launch=function()
 		=======================================================================================*/
 		Game.CheckUpdates=function()
 		{
-			if (!App) getJson(DataDir+'version.json',function(r){
+			if (!App) getJson('data/version.json',function(r){
 				var entry='Cookie Clicker'+(Game.beta?' beta':'');
 				if (r && r[entry])
 				{
@@ -2594,7 +2591,7 @@ Game.Launch=function()
 		
 		Game.UpdateHeralds=function()
 		{
-			if (!App) getJson(DataDir+'cookieclickersteam.json',function(r){
+			if (!App) getJson('data/cookieclickersteam.json',function(r){
 				Game.heralds=r?(parseInt(r.steamPlayers||1)):1;
 				Game.heralds=Math.max(0,Math.min(100,Math.ceil(Game.heralds/100*100)/100));
 				l('heraldsAmount').textContent=Math.floor(Game.heralds);
@@ -2609,7 +2606,7 @@ Game.Launch=function()
 		};
 		Game.FetchGrandmaNames=function()
 		{
-			if (!App) getJson(DataDir+'grandmas.json',function(r){
+			if (!App) getJson('data/grandmas.json',function(r){
 				if (r) Game.customGrandmaNames=r.filter(function(el){return el!='';});
 			});
 		};
@@ -2659,7 +2656,7 @@ Game.Launch=function()
 				});
 			}
 			
-			getJson(DataDir+'cookieclickerinfo.json',function(r){
+			getJson('data/cookieclickerinfo.json',function(r){
 				if (r)
 				{
 					var versions=r.versions||[];
